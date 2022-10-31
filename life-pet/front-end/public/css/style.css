@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Amiri & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* zerando margem */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* geral */
+
+body {
+    font-family: Open Sans;
+    background-color: #fff;
+    background-color: rgb(241, 241, 241);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3193c1;
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    border-bottom: 3px solid white;
+}
+
+.cabecalho>img {
+    width: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cabecalho>h1 {
+    display: flex;
+    font-size: 2.0rem;
+    padding: 10px;
+    color: #FFF;
+}
+
+#titulo {
+    font-family: Caveat;
+}
+
+#busca {
+    margin: 0 auto 0 20px;
+    padding: 0;
+}
+
+.opcoes {
+    margin: 0 auto 0 0;
+}
+
+#txtbusca {
+    border: 0px solid #222;
+    background: transparent;
+    width: 260px;
+    height: 33px;
+    margin: 0 auto;
+    padding: 5px 0 5px 5px;
+    float: left;
+    line-height: 36px;
+    color: #fff;
+}
+
+#txtbusca::placeholder {
+    color: #FFF;
+}
+
+#txtbusca:focus-visible {
+    outline: 0;
+}
+
+#btnBusca {
+    background-color: transparent;
+    position: relative;
+    border: 0px solid #222;
+    color: #FFF;
+    margin: 0 auto;
+    border: 0 none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.search {
+    background-color: #80bedb47;
+    border-radius: 5px;
+    padding: 2px 10px;
+    display: flex;
+}
+
+.search:focus {
+    border: 1px solid white;
+}
+
+.search1 {
+    background-color: #80bedb47;
+    border-radius: 5px;
+    padding: 2px 10px;
+    display: flex;
+    display: none;
+}
+
+#btnBusca:hover {
+    color: rgb(132, 132, 132);
+}
+
+.rigth-side {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    background-color: #80bedb47;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: rgba(227, 222, 222, 0.533);
+}
+
+.container {
+    margin: 50px;
+    width: 50%
+}
+
+.container>img {
+    width: 120%;
+    height: 300px;
+}
+
+.setores {
+    width: 100%;
+    height: 50px;
+    background-color: #4BAEA0;
+    text-align: center;
+}
+
+.setores>a {
+    color: whitesmoke;
+    font-size: 0.9rem;
+    padding: 20px;
+    position: relative;
+    bottom: -15px;
+    cursor: default;
+}
+/*
+ .setores>a:hover {
+    color: #3193c1;
+    transform: scale(1.1)
+} 
+
+.setores>a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    transition: 0.3s;
+    top: 40px;
+}
+
+.setores>a:hover:after {
+    width: 100%;
+}
+*/
+#menu-mobile {
+    background: transparent;
+    outline: none;
+    border: 0;
+    font-size: 28px;
+    display: none;
+}
+
+.search-mobile {
+    background-color: #3193c1;
+    padding: 5px;
+    display: none;
+}
+
+#pedidos,
+#promocoes,
+#servicos,
+#login,
+#cadastro {
+    display: inline-flex
+}
+
+#pedidos::after {
+    content: "shopping_basket";
+    font-family: 'Material Icons Round';
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+#promocoes::after {
+    content: "savings";
+    font-family: 'Material Icons Round';
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+#servicos::after {
+    content: "manage_accounts";
+    font-family: 'Material Icons Round';
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+#login::after {
+    content: "login";
+    font-family: 'Material Icons Round';
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.carrosel{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide{
+    width: 1024px;
+    height: 576px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s;
+    opacity: 0.9;
+  }
+  
+  .item-slide{
+    width: 5120px ;
+    display: flex;
+  }
+  
+  .images img{
+    width: 80vw;
+    height: 60vh;
+  }
+  
+  #atual{
+    transition: all 2s;
+  }
+  
+  .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: #4BAEA0;;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 3.0em;
+    margin-top: -5px;
+  }
+  
+  .btn:hover{
+    transform: scale(1.5);
+  }
+  
+  #voltar{
+    top: 55%;
+    left: 10%;
+  }
+  
+  #avancar{
+    top: 55%;
+    right: 10%;
+  }
+  
+  .position{
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+  
+    position: absolute;
+    width: 1024px;
+  }
+  
+  .position div{
+    transition: all 0.5s;
+    border: 3px solid #fff;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right:15px ;
+    cursor: pointer;
+  }
+  
+  .position div:hover{
+    background: #fff;
+  }
+  
+  .primeira{
+    transition: all 0.5s;
+    background: #fff;
+  }
+
+  .propaganda{
+      width: 100%;
+      height: 100px;
+      background: #4BAEA0;
+      display: inline-block;
+      text-align: center;
+      margin-top: 60px;
+  }
+
+  #desconto{
+    display: inline-block;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .card{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 40px;
+    flex-flow: wrap;
+
+}
+
+.cartao{
+    border-radius: 6px;
+    padding: 20px ;
+    margin: 20px ;
+    width: 300px;
+    height: 350px;
+    transition: all 0.2s ease-out;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartao >p{
+    text-align: center;
+    color: black;
+    font-size: 1.0em;
+    font-family: roboto, sans-serif;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cartao >img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    float: center;
+    right: 50px ;
+    margin: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.cartao >img:hover{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05)
+}
+
+
+@media only screen and (max-width: 768px) {
+    #busca {
+        display: none;
+    }
+    .opcoes {
+        display: none;
+    }
+    .nav {
+        display: none;
+    }
+    .setores {
+        display: none;
+    }
+    .search1 {
+        display: flex;
+    }
+    .search-mobile {
+        display: block;
+    }
+    #menu-mobile {
+        display: block;
+    }
+}

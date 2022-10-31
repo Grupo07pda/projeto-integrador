@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;  
+}
+
+body{
+    background-image: url(../imagens/background-teste1.png);
+}
+
+.corpo {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction:row;
+}
+
+.container {
+   
+   background-color: whitesmoke;
+    width: 700px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 6px 6px 4px -4px #3193c1, -6px 0 4px -4px transparent;
+}
+
+.form{
+    text-align: center;
+    margin-top:20px;
+}
+
+.titulo-form {
+    background-color: whitesmoke;
+    border-radius: 30px;
+    box-shadow: 0 0 7px 0 #3193c1;
+    width: 500px;
+    margin-left:15%;   
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.inputUsuario{
+    border: none;
+    margin-top: 40px;
+    border-radius: 60px;
+    padding: 8px 0 8px 35px;
+    outline: none;
+    width: 50%;
+    background-color:#ffff;
+}
+
+.serv{
+    border: none;
+    margin-top: 10px;
+    border-radius: 60px;
+    padding: 8px 0 8px 35px;
+    outline: none;
+    width: 50%;
+    background-color:#ffff;
+}
+
+
+input[type=radio]{
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+button[type="button"] {
+    background: linear-gradient(to right, #3193c1, #58c9fd);
+    color: white;
+    border-radius: 30px;
+    width: 50%;
+    border: none;
+    outline: none;
+    padding: 8px 0 8px 15px;
+    font-size: 15px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+

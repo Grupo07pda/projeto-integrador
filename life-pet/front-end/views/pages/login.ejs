@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    
+
+    <header class="cabecalho">
+        <img src="imagens/logo.png" href="http://localhost:3000" alt="logo">
+       <!-- <img src="imagens/logo-transparent.png" href="index.html" alt="logo"> -->
+        <h1 id="titulo">LifePet PetShop</h1>
+        <nav class="nav">
+            <a id="login" href="http://localhost:4000" title="login">Página inicial</a>
+        </nav>
+    </header>
+
+    <main class="corpo">
+        <div class="container">
+
+            <div class="left-side-form">
+
+                <div class="buttonsForm">
+                    <div class="btnColor"></div>
+                    <button id="btnSignin">Login</button>
+                    <button id="btnSignup">Cadastro</button>
+                </div>
+
+                <form id="signin">
+                    <input type="text" placeholder="Email" id="input-email" required />
+                    <i class="fas fa-envelope iEmail"></i>
+                    <input type="password" placeholder="Senha" id="input-senha" required />
+                    <i class="fas fa-lock iPassword"></i>
+                    <button type="button"  onclick="login()">Login</button>
+                </form>
+
+                <form id="signup">
+                    <input type="text" placeholder="Nome" id="inputNome" required />
+                     <i class="fas fa-lock iPassword"></i>
+                    <input type="password" placeholder="Senha" id="inputSenha" required />
+                    <i class="fas fa-envelope iEmail"></i>
+                    <input type="text" placeholder="Email" id="inputEmail" required />
+                    <!--<input type="password" placeholder="Senha" required />-->
+                <!--<i class="fas fa-lock iPassword2"></i>-->
+                  
+                    <button type="button"  onclick="criar()">Cadastrar</button>
+                </form>
+
+            </div>
+
+            <div class="right-side-form">
+                <h1>LifePet PetShop</h1>
+                <img class="img-login" src="imagens/cachorro-login.jpg" alt="img-login">
+            </div>
+
+        </div>
+    </main>
+  
+    <script src="js/login.js"></script>
+    <script src="./js/fetch/usuario/criandoUsuario.js"></script>
+    <script src="./js/fetch/usuario/loginUsuario.js"></script>
+</body>
+</html>

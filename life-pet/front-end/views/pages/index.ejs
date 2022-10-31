@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+    <script src="js/slide.js"></script>
+    <script src="http://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>LifePet</title>
+</head>
+
+<body>
+    <%- include('../partials/home')%>
+    
+    <div class="setores">
+        <!-- <a href="#">Cachorro</a>
+        <a href="#">Gato</a>
+        <a href="#">Tosa</a>
+        <a href="#">Banho</a>
+        <a href="#">Novidades</a>
+        <a href="#">Raças</a>
+        <a href="#">Saúde</a>
+        <a href="#">Outlet</a> -->
+    </div>
+    <div class="search-mobile">
+        <form action="/search" class="search1" method="get">
+            <input id="txtbusca" name="q" type="text" value="" placeholder="O que seu pet precisa ?" />
+            <input id="btnBusca" type="submit" class="material-icons-round" value="search" />
+        </form>
+    </div>
+    <div id="linha-horizontal"></div>
+
+    <main class="corpo">
+        
+        <section class="carrosel">
+            <div class="slide">
+                <div class="item-slide">
+                  <div id="voltar" class="btn">
+                    <i class="fas fa-chevron-left"></i>
+                  </div>
+                  <div id="avancar" class="btn">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+            
+                  <div id="atual" class="images">
+                    <img src="imagens/2.png" alt="" srcset="">
+                  </div>
+                  <div class="images">
+                    <img src="imagens/1.png" alt="" srcset="">
+                  </div>
+                  <div class="images">
+                    <img src="imagens/3.png" alt="" srcset="">
+                  </div>
+                  <div class="images">
+                    <img src="imagens/4.png" alt="" srcset="">
+                  </div>
+                </div>
+                <div class="position">
+                </div>
+              </div>
+        
+        </section>
+<!--        
+        <section class="propaganda">
+            <div id="desconto">
+                <h3>20% OFF para assinantes do plano de saúde animal.</h3>
+            </div>
+
+        </section>
+
+        <div class="card">
+            <div class="cartao" >
+                <p>Mordedor</p>
+                <img src="https://www.lambeijospetshop.com.br/image/cache/data/produtos/brinquedos/74153b6d666e023510f181d70e7b0d28-926x926.jpg" alt="">
+                
+            </div>
+        
+            <div class="cartao">
+                <p>Petisco</p>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            
+            <div class="cartao">
+                <p>Coleira</p>
+                <img src="https://www.vivo.com.br/content/dam/vivo-sites/vivo-com-br/homepage/imagens/fotos/vivo-explica-coleiras-para-cachorro-material-2303-600x400.jpg" alt="">
+                 
+            </div>
+        
+          </div> -->
+        
+
+    </main>
+
+    <script>
+            var position = document.querySelector('.position')
+            var quant = document.querySelectorAll('.item-slide .images')
+            var atual = 0
+            var imagem = document.getElementById('atual')
+            var avancar = document.getElementById('avancar')
+            var voltar = document.getElementById('voltar')
+            var rolar = true
+
+            for (let i = 0; i < quant.length; i++) {
+            var div = document.createElement('div')
+            div.id = i
+            position.appendChild(div)
+            }
+            document.getElementById('0').classList.add('primeira')
+
+            var pos = document.querySelectorAll('.position div')
+
+            for (let i = 0; i < pos.length; i++) {
+            pos[i].addEventListener('click', () => {
+                atual = pos[i].id
+                rolar = false
+                slide()
+            })
+            }
+
+            voltar.addEventListener('click', () => {
+            atual--
+            rolar = false
+            slide()
+            })
+
+            avancar.addEventListener('click', () => {
+            atual++
+            rolar = false
+            slide()
+            })
+
+            function slide() {
+            if (atual >= quant.length) {
+                atual = 0;
+            } else if (atual < 0) {
+                atual = quant.length - 1
+            }
+
+            document.querySelector('.primeira').classList.remove('primeira')
+            imagem.style.marginLeft = -1024 * atual +'px'
+            document.getElementById(atual).classList.add('primeira')
+
+            }
+
+            setInterval(()=>{
+            if(rolar){
+                atual++
+                slide()
+            }else{
+                rolar = true
+            }
+            },8000)
+
+    </script>
+</body>
+</html>
