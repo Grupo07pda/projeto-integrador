@@ -20,16 +20,6 @@ async function criando(){
     const inputdata = document.getElementById("data");
     const data =inputdata.value;
 
-    console.log(animal)
-    console.log(servicos)
-    console.log(porte)
-    console.log(especie)
-    console.log(nome)
-    console.log(cpf)
-    console.log(telefone)
-    console.log(data)
-
-    
     const url = "http://localhost:3000/servico"
    await fetch( url,{
         method: "POST",
@@ -60,8 +50,8 @@ async function criando(){
             localStorage.setItem("serv-dono", servicos.nome_dono)
             localStorage.setItem("serv-cpf", servicos.cpf)
             localStorage.setItem("serv-telefone", servicos.telefone)
-            localStorage.setItem("serv-data", servicos.data)
-            window.alert("Agendamento realizado com sucesso!!!")
+            localStorage.setItem("serv-data", servicos.horario)
+            window.location.href= "http://localhost:4000/perfil";
        
         }else{
         window.alert("Erro no agendamento, tente novamente.")

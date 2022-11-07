@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(res => {console.log(res);
         const usuarios = res.user
         if(usuarios){
-            window.alert("Cadastro com sucesso, faça o login e continue.")
+            window.alert("Cadastrado com sucesso, faça o login e continue.")
             localStorage.setItem("user_id", usuarios.id)
             localStorage.setItem("user_nome",usuarios.nome)
             localStorage.setItem("user_email", usuarios.email)
-            window.alert("Cadastro com sucesso, faça o login e continue")
+            
         }else{
             window.alert("Cadastro falhou, tente mais tarde!!!")
          }

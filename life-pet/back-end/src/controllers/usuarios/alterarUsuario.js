@@ -9,7 +9,6 @@ const alterar = async (req,res)=>{
       senha: senha || pessoa.senha,
       logado: pessoa.logado
     }, { where: { id: id }});
-    console.log(nome)
     const usuarioAtualizado = await usuario.findByPk(id);
     return res.status(200).json({usuario: usuarioAtualizado});
 }

@@ -22,11 +22,7 @@ const login = async(req,res)=>{
         senha: usuarioExistente.senha|| usuarioExistente.senha,
         logado:true
       }, { where: { id: usuarioExistente.id }});
-      const usuarioAtualizado = await usuario.findByPk(usuarioExistente.id);
-    /*const updateUsuario  = await usuario.update(usuarioExistente.id,{
-        logado: 1
-    })   */
-    
+      const usuarioAtualizado = await usuario.findByPk(usuarioExistente.id);  
     return res.status(200).json({usuario:usuarioAtualizado})
 
 

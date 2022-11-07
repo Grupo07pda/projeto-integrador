@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 async function editarServico(){
-    const id = localStorage.getItem("servico_id");
+    const id = localStorage.getItem("serv-id");
     const url = `http://localhost:3000/servico/${id}`;
 
     const inputAnimal = document.getElementById("edit-animal");
@@ -30,16 +30,6 @@ async function editarServico(){
     const inputData = document.getElementById("edit-data");
     const data =inputData.value;
 
-    console.log({
-        animal,
-        servicos,
-         porte,
-         especie,
-         nome,
-         cpf,
-         telefone,
-         data})
-
     fetch(url,{
         method: "PUT",
         headers: {"Content-Type" : "application/json"},
@@ -55,48 +45,51 @@ async function editarServico(){
         })
     })
     .then(res => res.json())
-    .then(res =>{
+    .then(res =>{ console.log(res)
+
+            
+        if(animal !== " "){
+        localStorage.removeItem("serv-animal")
+        localStorage.setItem("serv-animal", animal)
+        }
+
+        if(servicos !== " "){
+        localStorage.removeItem("serv-servicos")
+        localStorage.setItem("serv-servicos", servicos)
+        }
+
+        if(porte !== " "){
+        localStorage.removeItem("serv-porte")
+        localStorage.setItem("serv-porte", porte)
+        }
+
+        if(especie !== " "){
+        localStorage.removeItem("serv-especie")
+        localStorage.setItem("serv-especie", especie)
+        } 
+
+        if(nome_dono!== " "){
+        localStorage.removeItem("serv-dono")
+        localStorage.setItem("serv-dono", nome_dono)
+        }
+
+        if(cpf !== " "){
+        localStorage.removeItem("serv-cpf")
+        localStorage.setItem("serv-cpf", cpf)
+        }
+
+        if(telefone !== " "){
+        localStorage.removeItem("serv-telefone")
+        localStorage.setItem("serv-telefone", telefone)
+        }
+
+        if(data !== " "){
+        localStorage.removeItem("serv-data")
+        localStorage.setItem("serv-data", data)
+        }    
+        
 
 
-            // if(animal !== " "){
-            // localStorage.removeItem("serv-animal")
-            // localStorage.setItem("serv-animal", animal)
-            // }
-
-            // if(servicos !== " "){
-            // localStorage.removeItem("serv-servicos")
-            // localStorage.setItem("serv-servicos", servicos)
-            // }
-
-            // if(porte !== " "){
-            // localStorage.removeItem("serv-porte")
-            // localStorage.setItem("serv-porte", porte)
-            // }
-
-            // if(especie !== " "){
-            // localStorage.removeItem("serv-especie")
-            // localStorage.setItem("serv-especie", especie)
-            // } 
-
-            // if(nome_dono!== " "){
-            // localStorage.removeItem("serv-dono")
-            // localStorage.setItem("serv-dono", nome_dono)
-            // }
-
-            // if(cpf !== " "){
-            // localStorage.removeItem("serv-cpf")
-            // localStorage.setItem("serv-cpf", cpf)
-            // }
-
-            // if(telefone !== " "){
-            // localStorage.removeItem("serv-telefone")
-            // localStorage.setItem("serv-telefone", telefone)
-            // }
-
-            // if(data !== " "){
-            // localStorage.removeItem("serv-data")
-            // localStorage.setItem("serv-data", data)
-            // }    
                     
 
     })
@@ -149,7 +142,8 @@ function inicialForm(){
      nome_dono,
      cpf,
      telefone,
-     data})
+     data
+    })
     
 
 }
@@ -158,4 +152,3 @@ document.addEventListener("DOMContentLoaded", () => {
     inicialForm()
 })
 
-       
